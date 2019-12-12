@@ -1,14 +1,18 @@
-<div class="row">
+<div class="row mx-auto">
   <div class="col-xs-12">
-    <button class="btn btn-success mt-3 ml-3">New Recipe</button>
+    <button class="btn border btn-success">New Recipe</button>
   </div>
 </div>
 
 <hr />
 
 <div class="row">
-  <div class="col-xs-12 ml-3">
-    <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
+  <div class="col-xs-12 mx-3 w-100">
+    <a
+      href="#"
+      class="list-group-item clearfix mb-2 rounded"
+      *ngFor="let recipe of recipes"
+    >
       <div class="float-left">
         <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
         <p class="list-group-item-text">{{ recipe.description }}</p>
@@ -17,7 +21,7 @@
         ><img
           src="{{ recipe.imagePath }}"
           alt="{{ recipe.name }}"
-          class="img-responsive"
+          class="img-responsive rounded"
           style="max-height: 80px"
       /></span>
     </a>
